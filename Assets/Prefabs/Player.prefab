@@ -737,7 +737,7 @@ Transform:
   m_Children:
   - {fileID: 7932798008395564123}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &303945391771423258
 MonoBehaviour:
@@ -868,6 +868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c246ec6795ca124687930fb02ebf109, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _groundMask:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!114 &820395815894068918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -906,7 +909,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c56132fbeb7bbc46a9e37cdec4094be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ability_1: {fileID: 11400000, guid: ed91ce82bf51abb479783d2fa69b02a0, type: 2}
+  _spawnPoint: {fileID: 2901885229455924370}
+  _abilityQ: {fileID: 11400000, guid: ed91ce82bf51abb479783d2fa69b02a0, type: 2}
+  _abilityW: {fileID: 11400000, guid: 736b71eed988eab46804bf089c0453d5, type: 2}
+  _abilityE: {fileID: 11400000, guid: c76fd33372af5fa46b56f7acfc49c09b, type: 2}
 --- !u!1 &1902818968205152913
 GameObject:
   m_ObjectHideFlags: 0

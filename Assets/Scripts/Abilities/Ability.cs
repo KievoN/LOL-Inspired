@@ -8,4 +8,15 @@ public class Ability : ScriptableObject
 
     [Header("-= Stats =-")]
     [Min(0.1f)] public float _cooldown = 1f;
+
+    public enum AbilityKey
+    {
+        Q,
+        W,
+        E,
+        R
+    }
+    public AbilityKey _key;
+
+    public virtual void SpawnAbility(GameObject Instigator, Transform spawnPoint, Ability ability) { }
 }

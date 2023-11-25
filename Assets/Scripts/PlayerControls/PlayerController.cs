@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour
 {
     private NavMeshAgent Agent;
 
+    [SerializeField] private LayerMask _groundMask;
+
     private void Awake()
     {
         Agent = GetComponent<NavMeshAgent>();
@@ -40,9 +42,7 @@ public class PlayerController : MonoBehaviour
     private void MoveToPoint()
     {
         // Player clicked to move
-        Vector3 mousePos = new Vector3(Pointer.current.position.ReadValue().x, Pointer.current.position.ReadValue().y, 0f);
-        Ray movePosition = Camera.main.ScreenPointToRay(mousePos);
-        if (Physics.Raycast(movePosition, out var hitInfo))
+        if (Physics.Raycast(GameManager.MouseRayPoint, out var hitInfo, Mathf.Infinity, _groundMask))
         {
             Agent.SetDestination(hitInfo.point);
         }

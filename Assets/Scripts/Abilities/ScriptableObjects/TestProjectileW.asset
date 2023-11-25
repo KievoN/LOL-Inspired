@@ -10,8 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f50f435176a4d484fb0dd656f6df2be0, type: 3}
-  m_Name: TestProjectile
+  m_Name: TestProjectileW
   m_EditorClassIdentifier: 
   _name: Test Projectile
-  _cooldown: 1
-  _damage: 1e0000003200000046000000
+  _cooldown: 5
+  _key: 1
+  _projectileSpeed: 0.25
+  _damage: 960000003200000046000000
+  lifeSpan: 0.65
