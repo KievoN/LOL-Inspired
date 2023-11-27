@@ -18,5 +18,8 @@ public class Ability : ScriptableObject
     }
     public AbilityKey _key;
 
-    public virtual void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null) { }
+    public virtual void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null)
+    {
+        Instigator.GetComponent<PlayerAttack>().CancelAttack();
+    }
 }

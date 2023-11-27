@@ -16,5 +16,5 @@ MonoBehaviour:
   _cooldown: 1
   _key: 0
   ProjectileSpeed: 0.4
-  Damage: 1e0000003200000046000000
+  Damage: 500000006400000078000000
   DistanceSpan: 750

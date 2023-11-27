@@ -11,6 +11,8 @@ public class AbilityProjectile : Ability
 
     public override void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null)
     {
+        base.SpawnAbility(Instigator, ability, spawnPoint);
+
         if (Physics.Raycast(GameManager.MouseRayPoint, out var hitInfo))
         {
             Vector3 mouseHitPointFlat = new(hitInfo.point.x, 0f, hitInfo.point.z);

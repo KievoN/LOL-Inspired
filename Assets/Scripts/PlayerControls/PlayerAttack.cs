@@ -13,6 +13,8 @@ public class PlayerAttack : MonoBehaviour
 
     private float _attackCooldown = 0f;
 
+    [SerializeField] private Transform _spawnPoint;
+
     private void Update()
     {
         if(_attackCooldown > 0f)
@@ -51,7 +53,7 @@ public class PlayerAttack : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
 
             // Shoot basic projectile
-            SpawnProjectile(gameObject, transform);
+            SpawnProjectile(gameObject, _spawnPoint);
             _attackCooldown = (1 / PlayerStats.AttackSpeed);
 
             yield return null;

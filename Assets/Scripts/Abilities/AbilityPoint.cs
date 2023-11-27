@@ -13,6 +13,8 @@ public class AbilityPoint : Ability
 
     public override void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null)
     {
+        base.SpawnAbility(Instigator, ability, spawnPoint);
+
         if (Physics.Raycast(GameManager.MouseRayPoint, out var hitInfo))
         {
             GameObject point = Instantiate(Resources.Load<GameObject>("Prefabs/Point"), CappedDistance(Instigator, hitInfo.point), Quaternion.identity);
@@ -38,7 +40,7 @@ public class AbilityPoint : Ability
             // Targeted point is out of range
             // Clamp it within the ability range
             Debug.Log("Direction: " + targetDirection + "   " + "Magnitude: " + targetDirection.magnitude);
-            return targetDirection * AbilityRange / 100;
+            return playerPos + (targetDirection * AbilityRange / 100);
         }
         else return hitPoint;
     }
