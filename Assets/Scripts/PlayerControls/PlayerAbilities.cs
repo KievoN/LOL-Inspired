@@ -18,22 +18,19 @@ public class PlayerAbilities : MonoBehaviour
 
     public void OnQ(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed || _abilityQCooldown > 0) return;
-        Debug.Log("Q!");
+        if (!ctx.canceled || _abilityQCooldown > 0) return;
         SpawnAbility(_abilityQ);
     }
 
     public void OnW(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed || _abilityWCooldown > 0) return;
-        Debug.Log("W!");
+        if (!ctx.canceled || _abilityWCooldown > 0) return;
         SpawnAbility(_abilityW);
     }
 
     public void OnE(InputAction.CallbackContext ctx)
     {
-        if (!ctx.performed || _abilityECooldown > 0) return;
-        Debug.Log("E!");
+        if (!ctx.canceled || _abilityECooldown > 0) return;
         SpawnAbility(_abilityE);
     }
 
@@ -41,7 +38,7 @@ public class PlayerAbilities : MonoBehaviour
 
     private void SpawnAbility(Ability ability)
     {
-        ability.SpawnAbility(gameObject, _spawnPoint.transform, ability);
+        ability.SpawnAbility(gameObject, ability, _spawnPoint.transform);
 
         StartCoroutine(CooldownTimer(ability._cooldown, ability));
     }

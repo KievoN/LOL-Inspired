@@ -15,6 +15,6 @@ MonoBehaviour:
   _name: Test Projectile
   _cooldown: 1
   _key: 0
-  _projectileSpeed: 0.4
-  _damage: 4b0000003200000046000000
-  lifeSpan: 0.4
+  ProjectileSpeed: 0.4
+  Damage: 1e0000003200000046000000
+  DistanceSpan: 750

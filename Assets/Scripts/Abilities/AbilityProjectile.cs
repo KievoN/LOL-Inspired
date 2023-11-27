@@ -5,11 +5,11 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Ability/Projectile")]
 public class AbilityProjectile : Ability
 {
-    public float _projectileSpeed = 1f;
-    [Min(0)] public int[] _damage = { 30, 50, 70 };
-    public float lifeSpan = 1f;
+    public float ProjectileSpeed = 1f;
+    [Min(0)] public int[] Damage = { 30, 50, 70 };
+    public int DistanceSpan = 100;
 
-    public override void SpawnAbility(GameObject Instigator, Transform spawnPoint, Ability ability)
+    public override void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null)
     {
         if (Physics.Raycast(GameManager.MouseRayPoint, out var hitInfo))
         {
@@ -22,7 +22,7 @@ public class AbilityProjectile : Ability
                 Quaternion.LookRotation(forward, Vector3.up));
 
             // Initialize projectile stats
-            projectile.GetComponent<ProjectileController>().Initialize(Instigator, _projectileSpeed, _damage[0], lifeSpan);
+            projectile.GetComponent<ProjectileController>().Initialize(Instigator, ProjectileSpeed, Damage[0], DistanceSpan);
         }
 
     }

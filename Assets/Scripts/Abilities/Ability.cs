@@ -18,5 +18,5 @@ public class Ability : ScriptableObject
     }
     public AbilityKey _key;
 
-    public virtual void SpawnAbility(GameObject Instigator, Transform spawnPoint, Ability ability) { }
+    public virtual void SpawnAbility(GameObject Instigator, Ability ability, Transform spawnPoint = null) { }
 }

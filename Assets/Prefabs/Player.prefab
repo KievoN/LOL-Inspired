@@ -716,6 +716,7 @@ GameObject:
   - component: {fileID: 820395815894068918}
   - component: {fileID: 5510272680437054082}
   - component: {fileID: 4244025449587678367}
+  - component: {fileID: 772780408426717849}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -871,6 +872,9 @@ MonoBehaviour:
   _groundMask:
     serializedVersion: 2
     m_Bits: 128
+  _attackMask:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!114 &820395815894068918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,7 +916,19 @@ MonoBehaviour:
   _spawnPoint: {fileID: 2901885229455924370}
   _abilityQ: {fileID: 11400000, guid: ed91ce82bf51abb479783d2fa69b02a0, type: 2}
   _abilityW: {fileID: 11400000, guid: 736b71eed988eab46804bf089c0453d5, type: 2}
-  _abilityE: {fileID: 11400000, guid: c76fd33372af5fa46b56f7acfc49c09b, type: 2}
+  _abilityE: {fileID: 11400000, guid: 95ff51f55a7b3fc4fa90ba11b713e646, type: 2}
+--- !u!114 &772780408426717849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814385612909665583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 718f684f18587da48b425e13d2d2715f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1902818968205152913
 GameObject:
   m_ObjectHideFlags: 0
