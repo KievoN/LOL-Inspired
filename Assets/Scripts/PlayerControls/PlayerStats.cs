@@ -6,7 +6,7 @@ public class PlayerStats
 {
     [Header("Stats")]
     [Header("Damage")]
-    public int AttackDamage = 50;
+    public int AttackDamage = 75;
     public int AbilityPower = 0;
 
     [Header("Armors")]
@@ -14,7 +14,7 @@ public class PlayerStats
     public int MagicResist = 40;
 
     [Header("Attack modifiers")]
-    public float AttackSpeed = 0.80f;
+    public float AttackSpeed = 1.25f;
     public int AbilityHaste = 0;
 
     [Header("Others")]
